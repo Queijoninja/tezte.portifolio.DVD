@@ -1,39 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'renogare';
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  background:
-  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0.6)),
-  url("img/OMORIAAAAA.gif") no-repeat top center/cover;
-  height: 100vh;
+body { 
+    background: url('img/OMORIAAAAABL.gif') no-repeat center/cover;
+    height: 100vh;
 }
+
 
 body * {
-  color: white;
+    color:white;
 }
 
-@font-face {
-  font-family: 'renogare';
-  src: url('./font/renogare.ttf') format('truetype');
+p{
+    font-family: "roboto", sans-serif;
 }
 
-p {
-  font-family: 'renogare', sans-serif;
+a{
+    text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-#container {
-  width: 100%;
-  max-width: 588px;
-  margin: 56px auto 0px;
-  padding: 0 24px;
+#container{
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
 }
 
 #profile {
@@ -49,6 +42,13 @@ a {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+}
+
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
 }
 
 #switch {
@@ -68,11 +68,11 @@ a {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  animation: slide-back 0.2s;
+  animation: slide-back 0.5s;
 }
 
 .light #switch button {
-  animation: slide-in 0.2s forwards;
+  animation: slide-in 0.5s forwards;
   background: black url(img/sol_claro.png);
 }
 
@@ -84,8 +84,8 @@ a {
   display: block;
   width: 64px;
   height: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.623);
+  border: 1px solid rgb(0, 0, 0);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
@@ -96,114 +96,121 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px 0;
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
 }
 
-ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s;
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 16px 24px;
+    background: rgba(158, 154, 160, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.5s;
+
 }
 
-ul li a:hover {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1.5px solid white;
+ul li a:hover{
+    background: rgba(0, 0, 0, 0.02);
+    border: 1.5px solid white;
 }
 
-.light ul li a:hover {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1.5px solid black;
+.light ul li a:hover{
+    background: rgba(0, 0, 0, 0.02);
+    border: 1.5px solid black;
 }
 
-#social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 24px 0;
-  font-size: 24px;
+#social-links{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
 }
 
 #social-links a ion-icon {
-  font-size: 32px;
-  color: rgb(184, 26, 26);
+    font-size: 32px;
+    color: blue;
 }
 
-
-#social links a {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  transition: background 0.2s;
-  border-radius: 50%;
+.light #social-links a ion-icon {
+    font-size: 32px;
+    color: orange;
 }
 
-#social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+#social-links a{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
 }
 
-.light #social-links a:hover {
-  background: rgba(0, 0, 0, 0.1);
+#social-links a:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.light #social-links a:hover{
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .profile-photo {
-  border-radius: 50%;
-  border: 3px solid darkred;
+    border-radius: 50%;
+    border: 3px solid white;
 }
 
 .light .profile-photo {
-  border: 3px solid blue;
+    border: 3px solid black;
 }
 
 .light a, .light p, .light ion-icon {
-  color: black;
+    color: black;
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'vt323', monospace;
 }
 
 @media (min-width: 700px) {
-  body {
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/img/fundoBranco.gif);
-    background-color: rgba(0, 0, 0, 0.9);
-  }
+    body{
+        background: url(img/OMORIAAAAABL.gif) no-repeat top center/cover;
 
-  .light body {
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(/img/fundoBranco.gif);
-  }
-}
+    }
+
+    .light body{
+        background: url(img/OMORIAAAAA.gif) no-repeat top center/cover;
+    }
+} 
 
 @keyframes slide-in {
-  from {
-    left: 0; 
-  }
-  to {
-    left: 50%;
-  }
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
 }
 
 @keyframes slide-back {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 0;
-  }
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
